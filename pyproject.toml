@@ -1,26 +1,24 @@
-[project]
+[tool.poetry]
 name = "src"
-description = "An example package for the OSIS Reproducibility Workshop."
-readme = "README.md"
-authors = [
-    { name = "Emanuel Sommer", email = "emanuel.sommer@stat.uni-muenchen.de" },
-    { name = "Tobias Weber", email = "tobias.weber@stat.uni-muenchen.de" },
-    { name = "Lisa Wimmer", email = "lisa.wimmer@stat.uni-muenchen.de" }
-]
-license = { text = "MIT" }
-dependencies = [
-    "fire=0.6.0",
-    "matplotlib==3.8.3",
-    "nptyping==2.5.0",
-    "numpy==1.26.4",
-    "pyyaml==6.0.1"
-]
 version = "0.12"
+description = "An example package for the OSIS Reproducibility Workshop."
+authors = [
+    "Emanuel Sommer <emanuel.sommer@stat.uni-muenchen.de>",
+    "Tobias Weber <tobias.weber@stat.uni-muenchen.de>",
+    "Lisa Wimmer <lisa.wimmer@stat.uni-muenchen.de>"
+]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fire = "0.6.0"
+matplotlib = "3.8.3"
+nptyping = "2.5.0"
+numpy = "1.26.4"
+pyyaml = "6.0.1"
 
 
 [build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
-
-[tool.setuptools]
-packages = ["src"]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
