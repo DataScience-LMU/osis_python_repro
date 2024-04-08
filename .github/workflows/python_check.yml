@@ -1,0 +1,42 @@
+name: Python Package Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v2
+      with:
+        python-version: "3.10"
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install poetry
+        poetry install
+        pip install flake8 mypy pydocstyle
+
+    - name: Run unittests
+      run: |
+        python -m unittest discover -s ./ -p 'test_*.py'
+    - name: Run Flake8
+      run: |
+        flake8 --max-line-length=88 --ignore=E203 src
+    - name: Run MyPy
+      if: ${{ always() }}
+      run: |
+        mypy --ignore-missing-imports --scripts-are-modules --follow-imports=skip src
+    - name: Run Pydocstyle
+      if: ${{ always() }}
+      run: |
+        pydocstyle --ignore-decorators=property src
