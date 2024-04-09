@@ -1,3 +1,5 @@
+"""Module to run the classifier using the provided configuration file."""
+
 import fire
 import matplotlib.pyplot as plt
 import numpy as np
@@ -9,6 +11,13 @@ from src.utils import initialize_rng
 
 
 def run_classifier(cfg_path: str = 'config.yml') -> None:
+    """
+    Run the classifier using the provided configuration file.
+
+    :param cfg_path: The path to the configuration file (default: 'config.yml').
+    :type cfg_path: str
+    :return: None
+    """
     # Create configuration object
     cfg = initialize_config(cfg_path)
 
