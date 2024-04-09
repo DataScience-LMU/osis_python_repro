@@ -25,14 +25,4 @@ html_theme = 'classic'
 html_static_path = ['_static']
 
 # autodoc
-# autosummary_generate = True
 autodoc_typehints = 'description'
-autodoc_default_options = {
-    'members': True,
-    'member-order': 'bysource',
-    'special-members': True,
-    'undoc-members': True,
-    'exclude-members': '__weakref__',
-    'show-inheritance': True,
-}
-# autodoc_mock_imports = ["src"]

@@ -192,14 +192,13 @@ class PolynomialRegressionModel(LinearRegressionModel):
     A polynomial regression model that extends the LinearRegressionModel class.
 
     Parameters:
-    :param degree (int): The degree of the polynomial regression model. Must be greater
-        than 0.
+    :param degree: The degree of the polynomial regression model. Must be greater
+    than 0.
+    :type degree: int
 
     Methods:
-    :return _modify_input(x: NDArray[Shape['*, *'], Float]) ->
-        NDArray[Shape['*, *'], Float]:
-        Modifies the input features by transforming them into polynomial features.
-
+        _modify_input: Modifies the input features by transforming them into polynomial
+            features.
     """
 
     def __init__(self, degree: int = 3, *args, **kwargs):
@@ -215,11 +214,12 @@ class PolynomialRegressionModel(LinearRegressionModel):
         Modifiy the input features by transforming them into polynomial features.
 
         Parameters:
-        :param x (NDArray[Shape['*, *'], Float]): The input features.
+        :param x: The input features.
+        :type x: NDArray[Shape['*, *'], Float]
 
         Returns:
-        :return NDArray[Shape['*, *'], Float]: The transformed input features.
-
+        :return x_transformed: The transformed input features.
+        :rtype: NDArray[Shape['*, *'], Float]
         """
         transformed_features = []
 
