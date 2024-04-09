@@ -9,7 +9,7 @@ Template Python Project for the Advanced Reproducibility Workshop (OSIS)
     - [] poetry
     - [] pre-commit
 - [] unittest usage
-- [] sphinx for documentation
+- [] sphinx for documentation (local: `sphinx-build . _build` from `docs` directory)
 - [] add code coverage? codecov workflow?
 - [] add usage instructions
 - [] add contribution guidelines
