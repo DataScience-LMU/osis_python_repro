@@ -53,7 +53,7 @@ jobs:
     - name: Run Flake8
       run: |
         source .venv/bin/activate
-        flake8 --max-line-length=88 --ignore=E203,F722 src
+        flake8 --max-line-length=88 --ignore=E203,F722,W503 src
     - name: Run MyPy
       if: ${{ always() }}
       run: |
