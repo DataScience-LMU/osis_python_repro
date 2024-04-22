@@ -14,3 +14,6 @@ Template Python Project for the Advanced Reproducibility Workshop (OSIS)
 - [ ] add usage instructions
 - [ ] add contribution guidelines
 - [ ] add citation information
+
+
+Random logo created with Stable Diffusion 2 (Rombach et al., 2022)
