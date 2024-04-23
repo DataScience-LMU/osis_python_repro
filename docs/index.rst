@@ -1,9 +1,9 @@
-Welcome to OSIS Reproducability Python Temlate's documentation!
+Welcome to the documentation of the OSIS Reproducability Python Template!
 ===============================================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   :glob:
 
-   introduction.md
    source/*

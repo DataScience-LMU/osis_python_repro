@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "src"
-version = "0.12"
+version = "0.1.0"
 description = "An example package for the OSIS Reproducibility Workshop."
 authors = [
     "Emanuel Sommer <emanuel.sommer@stat.uni-muenchen.de>",
