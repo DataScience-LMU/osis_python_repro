@@ -2,6 +2,7 @@
  ![Python 3.10+](https://img.shields.io/badge/python-3.10%2C%203.11%2C%203.12-blue?logo=python)
  [![Documentation](https://img.shields.io/badge/documentation-view-blue?logo=read-the-docs)](https://datascience-lmu.github.io/osis_python_repro/)
  ![Code Style Black](https://img.shields.io/badge/code%20style-black-black)
+ [![codecov](https://codecov.io/gh/DataScience-LMU/osis_python_repro/graph/badge.svg?token=DTLY6DO9OG)](https://codecov.io/gh/DataScience-LMU/osis_python_repro)
  [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
  [![GitHub](https://img.shields.io/badge/GitHub-View%20on%20GitHub-lightgrey?logo=github)](https://github.com/DataScience-LMU/osis_python_repro)
 
