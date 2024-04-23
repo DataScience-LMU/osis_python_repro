@@ -47,7 +47,6 @@ class TestPolynomialRegressionModel(unittest.TestCase):
         y_pred = model.transform(self.x)
         self.assertEqual(y_pred.shape, self.y.shape)
         self.assertAlmostEqual(y_pred.mean(), self.y.mean(), places=1)
-        print(model.weight)
         self.assertAlmostEqual(model.weight[0].item(), 0, places=0)
         self.assertAlmostEqual(model.weight[1].item(), 2, places=0)
         self.assertAlmostEqual(model.weight[2].item(), 5, places=0)
