@@ -50,6 +50,11 @@ jobs:
       run: |
         source .venv/bin/activate
         python -m unittest discover -s ./ -p 'test_*.py'
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v4.0.1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        slug: DataScience-LMU/osis_python_repro
     - name: Run Flake8
       run: |
         source .venv/bin/activate
