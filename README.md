@@ -1,5 +1,5 @@
  ![Latest Version](https://img.shields.io/badge/version-0.1.0-g)
- ![Python 3.10+](https://img.shields.io/badge/python-3.10%2C%203.11-blue?logo=python)
+ ![Python 3.10+](https://img.shields.io/badge/python-3.10%2C%203.11%2C%203.12-blue?logo=python)
  [![Documentation](https://img.shields.io/badge/documentation-view-blue?logo=read-the-docs)](https://datascience-lmu.github.io/osis_python_repro/)
  ![Code Style Black](https://img.shields.io/badge/code%20style-black-black)
  [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
