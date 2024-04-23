@@ -54,11 +54,13 @@ jobs:
       run: |
         source .venv/bin/activate
         coverage report -m
+        coverage xml
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v4.0.1
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        slug: DataScience-LMU/osis_python_repro
+        file: ./coverage.xml
+        flags: unittests
     - name: Run Flake8
       run: |
         source .venv/bin/activate
