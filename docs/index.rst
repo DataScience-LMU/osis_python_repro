@@ -6,4 +6,4 @@ Welcome to OSIS Reproducability Python Temlate's documentation!
    :caption: Contents:
 
    introduction.md
-   api.md
+   source/*
