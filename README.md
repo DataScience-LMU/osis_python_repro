@@ -1,6 +1,6 @@
  ![Latest Version](https://img.shields.io/badge/version-0.1.0-g)
  ![Python 3.10+](https://img.shields.io/badge/python-3.10%2C%203.11-blue?logo=python)
- [![Documentation](https://img.shields.io/badge/documentation-view-blue?logo=read-the-docs)](https://tbd)
+ [![Documentation](https://img.shields.io/badge/documentation-view-blue?logo=read-the-docs)](https://datascience-lmu.github.io/osis_python_repro/)
  ![Code Style Black](https://img.shields.io/badge/code%20style-black-black)
  [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
  [![GitHub](https://img.shields.io/badge/GitHub-View%20on%20GitHub-lightgrey?logo=github)](https://github.com/DataScience-LMU/osis_python_repro)
@@ -9,7 +9,7 @@ This Project contains an example python package for the Advanced Reproducibility
 
 ##  Introduction
 
-Hi there! Here is the right place for a brief introduction to the project.
+Hi there! Here is the right place for a brief introduction to the project. The Documentation is available [here](https://datascience-lmu.github.io/osis_python_repro/).
 
 > The random project logo was created with Stable Diffusion 2 (Rombach et al., 2022).
 
