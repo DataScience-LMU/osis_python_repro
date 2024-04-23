@@ -7,13 +7,11 @@
 
 This Project contains an example python package for the Advanced Reproducibility Workshop (OSIS).
 
-## TODO:
-
-- [ ] add code coverage? codecov workflow?
-
 ##  Introduction
 
 Hi there! Here is the right place for a brief introduction to the project.
+
+> The random project logo was created with Stable Diffusion 2 (Rombach et al., 2022).
 
 ## Installation
 
@@ -28,7 +26,7 @@ Populate this section with instructions on how to use the project.
 ## Development Setup
 
 - Install pre-commit hooks with `pre-commit install`
-- Run tests with `unittest` with `python -m unittest discover -s tests`
+- Run tests with `unittest` with `python -m unittest discover -s ./ -p "*_test.py"`
 
 
 ## Contribution Guidelines
@@ -48,8 +46,6 @@ If you use this project, please cite it as follows:
   journal = {GitHub Repository},
 }
 ```
-
-> Random logo created with Stable Diffusion 2 (Rombach et al., 2022).
 
 ## License
 
