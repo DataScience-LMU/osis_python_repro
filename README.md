@@ -41,10 +41,8 @@ If you use this project, please cite it as follows:
 ```
 @misc{osis2022,
   author = {Emanuel Sommer and Tobias Weber and Lisa Wimmer},
-  title = {Advanced Reproducibility Workshop},
+  title = {Advanced Reproducibility Workshop - Python Package Template},
   year = {2024},
-  publisher = {GitHub},
-  journal = {GitHub Repository},
 }
 ```
 
