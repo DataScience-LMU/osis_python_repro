@@ -27,7 +27,7 @@ Populate this section with instructions on how to use the project.
 ## Development Setup
 
 - Install pre-commit hooks with `pre-commit install`
-- Run tests with `unittest` with `python -m unittest discover -s ./ -p "*_test.py"`
+- Run tests with `unittest` with `python -m unittest discover -s tests`
 
 
 ## Contribution Guidelines
