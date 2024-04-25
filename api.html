@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API reference &mdash; OSIS Reproducability Python Template  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            OSIS Reproducability Python Template
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="source/modules.html">src</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/src.html">src package</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OSIS Reproducability Python Template</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">API reference</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/api.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api-reference">
+<h1>API reference<a class="headerlink" href="#api-reference" title="Link to this heading"></a></h1>
+<section id="module-src.data">
+<span id="data"></span><h2>Data<a class="headerlink" href="#module-src.data" title="Link to this heading"></a></h2>
+<p>Data generation utilities.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.data.PolynomialDataGenerator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.data.</span></span><span class="sig-name descname"><span class="pre">PolynomialDataGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">degree</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coeff_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(-0.5,</span> <span class="pre">0.5)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(-5,</span> <span class="pre">5)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noise_mean</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noise_std</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rng</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.data.PolynomialDataGenerator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class that generates polynomial data with noise.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>degree</strong> (<em>int</em>) – The degree of the polynomial.</p></li>
+<li><p><strong>coeff_range</strong> (<em>tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>]</em>) – The range of coefficients for the polynomial.</p></li>
+<li><p><strong>x_range</strong> (<em>tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>]</em>) – The range of x values.</p></li>
+<li><p><strong>noise_mean</strong> (<em>float</em>) – The mean of the noise.</p></li>
+<li><p><strong>noise_std</strong> (<em>float</em>) – The standard deviation of the noise.</p></li>
+<li><p><strong>rng</strong> (<em>Optional</em><em>[</em><em>np.random.Generator</em><em>]</em>) – The random number generator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>degree</strong> (<em>int</em>) – The degree of the polynomial.</p></li>
+<li><p><strong>coeff_range</strong> (<em>tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>]</em>) – The range of coefficients for the polynomial.</p></li>
+<li><p><strong>x_range</strong> (<em>tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>]</em>) – The range of x values.</p></li>
+<li><p><strong>noise_mean</strong> (<em>float</em>) – The mean of the noise.</p></li>
+<li><p><strong>noise_std</strong> (<em>float</em>) – The standard deviation of the noise.</p></li>
+<li><p><strong>rng</strong> (<em>np.random.Generator</em>) – The random number generator.</p></li>
+<li><p><strong>coefficients</strong> (<em>ndarray</em>) – The coefficients of the polynomial.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.data.PolynomialDataGenerator.generate">
+<span class="sig-name descname"><span class="pre">generate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_samples</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.data.PolynomialDataGenerator.generate" title="Link to this definition"></a></dt>
+<dd><p>Generate polynomial data with noise.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>num_samples</strong> (<em>int</em>) – The number of samples to generate.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple containing the generated x and y values.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[ndarray, ndarray]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-src.model">
+<span id="models"></span><h2>Models<a class="headerlink" href="#module-src.model" title="Link to this heading"></a></h2>
+<p>Module to define regression models.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.model.LinearRegressionModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.model.</span></span><span class="sig-name descname"><span class="pre">LinearRegressionModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.model.LinearRegressionModel" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="source/src.html#src.model.RegressionModel" title="src.model.RegressionModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">RegressionModel</span></code></a></p>
+<p>Linear regression model for predicting continuous values.</p>
+<p>This class inherits from the <cite>RegressionModel</cite> base class.</p>
+<dl class="simple">
+<dt>Methods:</dt><dd><p>_modify_input: Modifies the input data by adding a bias column.
+_compute_weight: Computes the weight vector using the normal equation.
+_compute_output: Computes the predicted output values.</p>
+</dd>
+<dt>Attributes:</dt><dd><p>weight: The weight vector learned during training.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.model.PolynomialRegressionModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.model.</span></span><span class="sig-name descname"><span class="pre">PolynomialRegressionModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">degree</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.model.PolynomialRegressionModel" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="source/src.html#src.model.LinearRegressionModel" title="src.model.LinearRegressionModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">LinearRegressionModel</span></code></a></p>
+<p>A polynomial regression model that extends the LinearRegressionModel class.</p>
+<p>Parameters:
+:type degree: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>
+:param degree: The degree of the polynomial regression model. Must be greater
+than 0.
+:type degree: int</p>
+<dl class="simple">
+<dt>Methods:</dt><dd><dl class="simple">
+<dt>_modify_input: Modifies the input features by transforming them into polynomial</dt><dd><p>features.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>degree</strong> (<em>int</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.model.RegressionModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.model.</span></span><span class="sig-name descname"><span class="pre">RegressionModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.model.RegressionModel" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>Abstract base class for regression models.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.model.RegressionModel.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.model.RegressionModel.fit" title="Link to this definition"></a></dt>
+<dd><p>Fit the regression model to the training data.</p>
+<p>Parameters:
+:type x: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">NDArray</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Shape</span></code>[<a href="#id1"><span class="problematic" id="id2">*</span></a>, <a href="#id3"><span class="problematic" id="id4">*</span></a>], <code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]</span>
+:param x: Input features as a 2D array-like object.
+:type y: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">NDArray</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Shape</span></code>[<a href="#id1"><span class="problematic" id="id2">*</span></a>, <a href="#id3"><span class="problematic" id="id4">*</span></a>], <code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]</span>
+:param y: Target values as a 2D array-like object.</p>
+<p>Returns:
+:rtype: <span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="source/src.html#src.model.RegressionModel" title="src.model.RegressionModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">RegressionModel</span></code></a></span>
+:return: The fitted regression model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>NDArray</em><em>[</em><em>Shape</em><em>[</em><em>*</em><em>, </em><em>*</em><em>]</em><em>, </em><em>float64</em><em>]</em>) – </p></li>
+<li><p><strong>y</strong> (<em>NDArray</em><em>[</em><em>Shape</em><em>[</em><em>*</em><em>, </em><em>*</em><em>]</em><em>, </em><em>float64</em><em>]</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="source/src.html#src.model.RegressionModel" title="src.model.RegressionModel"><em>RegressionModel</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.model.RegressionModel.fit_transform">
+<span class="sig-name descname"><span class="pre">fit_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.model.RegressionModel.fit_transform" title="Link to this definition"></a></dt>
+<dd><p>Fit the regression model to the training data and transform the input features.</p>
+<p>Parameters:
+:type x: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">NDArray</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Shape</span></code>[<a href="#id1"><span class="problematic" id="id2">*</span></a>, <a href="#id3"><span class="problematic" id="id4">*</span></a>], <code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]</span>
+:param x: Input features as a 2D array-like object.
+:type y: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">NDArray</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Shape</span></code>[<a href="#id1"><span class="problematic" id="id2">*</span></a>, <a href="#id3"><span class="problematic" id="id4">*</span></a>], <code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]</span>
+:param y: Target values as a 2D array-like object.</p>
+<p>Returns:
+:return transformed_x: Transformed input features as a 2D array-like object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">NDArray</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Shape</span></code>[<a href="#id1"><span class="problematic" id="id2">*</span></a>, <a href="#id3"><span class="problematic" id="id4">*</span></a>], <code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]</span></p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>x</strong> (<em>NDArray</em><em>[</em><em>Shape</em><em>[</em><em>*</em><em>, </em><em>*</em><em>]</em><em>, </em><em>float64</em><em>]</em>) – </p></li>
+<li><p><strong>y</strong> (<em>NDArray</em><em>[</em><em>Shape</em><em>[</em><em>*</em><em>, </em><em>*</em><em>]</em><em>, </em><em>float64</em><em>]</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.model.RegressionModel.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.model.RegressionModel.transform" title="Link to this definition"></a></dt>
+<dd><p>Transform the input features using the fitted regression model.</p>
+<p>Parameters:
+:type x: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">NDArray</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Shape</span></code>[<a href="#id1"><span class="problematic" id="id2">*</span></a>, <a href="#id3"><span class="problematic" id="id4">*</span></a>], <code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]</span>
+:param x: Input features as a 2D array-like object.</p>
+<p>Returns:
+:return transformed_x: Transformed input features as a 2D array-like object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">NDArray</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Shape</span></code>[<a href="#id1"><span class="problematic" id="id2">*</span></a>, <a href="#id3"><span class="problematic" id="id4">*</span></a>], <code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]</span></p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>x</strong> (<em>NDArray</em><em>[</em><em>Shape</em><em>[</em><em>*</em><em>, </em><em>*</em><em>]</em><em>, </em><em>float64</em><em>]</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.model.create_model">
+<span class="sig-prename descclassname"><span class="pre">src.model.</span></span><span class="sig-name descname"><span class="pre">create_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_type</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.model.create_model" title="Link to this definition"></a></dt>
+<dd><p>Create a regression model based on the given model type.</p>
+<p>Parameters:
+:type model_type: <span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="source/src.html#src.config.ModelType" title="src.config.ModelType"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelType</span></code></a></span>
+:param model_type: The type of regression model to create.
+:type model_type: ModelType
+:type args: 
+:param args: Variable length argument list.
+:type kwargs: 
+:param kwargs: Arbitrary keyword arguments.</p>
+<p>Returns:
+:return: An instance of the created regression model.
+:rtype: RegressionModel</p>
+<p>Raises:
+:raises ValueError: If the given model type is unknown.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>model_type</strong> (<a class="reference internal" href="source/src.html#src.config.ModelType" title="src.config.ModelType"><em>ModelType</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="source/src.html#src.model.RegressionModel" title="src.model.RegressionModel"><em>RegressionModel</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-src.config">
+<span id="config"></span><h2>Config<a class="headerlink" href="#module-src.config" title="Link to this heading"></a></h2>
+<p>This module contains the configuration classes.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.config.ModelType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.config.</span></span><span class="sig-name descname"><span class="pre">ModelType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.config.ModelType" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Enumeration class representing different types of models.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.config.ModelType.LINEAR">
+<span class="sig-name descname"><span class="pre">LINEAR</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'linear'</span></em><a class="headerlink" href="#src.config.ModelType.LINEAR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.config.ModelType.POLYNOMIAL">
+<span class="sig-name descname"><span class="pre">POLYNOMIAL</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'polynomial'</span></em><a class="headerlink" href="#src.config.ModelType.POLYNOMIAL" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.config.RunConfiguration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.config.</span></span><span class="sig-name descname"><span class="pre">RunConfiguration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">polynomial_degree</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.config.RunConfiguration" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represent the configuration for a run.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>seed</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>) – The seed value for random number generation.</p></li>
+<li><p><strong>num_samples</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>) – The number of samples to generate.</p></li>
+<li><p><strong>model_type</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="source/src.html#src.config.ModelType" title="src.config.ModelType"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelType</span></code></a></span>) – The type of model to use.</p></li>
+<li><p><strong>polynomial_degree</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>) – The degree of the polynomial model.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.config.RunConfiguration.model_type">
+<span class="sig-name descname"><span class="pre">model_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="source/src.html#src.config.ModelType" title="src.config.ModelType"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelType</span></code></a></em><a class="headerlink" href="#src.config.RunConfiguration.model_type" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.config.RunConfiguration.num_samples">
+<span class="sig-name descname"><span class="pre">num_samples</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><a class="headerlink" href="#src.config.RunConfiguration.num_samples" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.config.RunConfiguration.polynomial_degree">
+<span class="sig-name descname"><span class="pre">polynomial_degree</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><a class="headerlink" href="#src.config.RunConfiguration.polynomial_degree" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.config.RunConfiguration.seed">
+<span class="sig-name descname"><span class="pre">seed</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><a class="headerlink" href="#src.config.RunConfiguration.seed" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.config.initialize_config">
+<span class="sig-prename descclassname"><span class="pre">src.config.</span></span><span class="sig-name descname"><span class="pre">initialize_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.config.initialize_config" title="Link to this definition"></a></dt>
+<dd><p>Initialize the configuration for running the application.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – The path to the configuration file.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The initialized configuration object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-src.utils">
+<span id="utils"></span><h2>Utils<a class="headerlink" href="#module-src.utils" title="Link to this heading"></a></h2>
+<p>Utility functions for the project.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.utils.initialize_rng">
+<span class="sig-prename descclassname"><span class="pre">src.utils.</span></span><span class="sig-name descname"><span class="pre">initialize_rng</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seed</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.utils.initialize_rng" title="Link to this definition"></a></dt>
+<dd><p>Initialize a random number generator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>seed</strong> (<em>int</em>) – The seed value for random number generation.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The random number generator.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.random.Generator</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.utils.read_yml">
+<span class="sig-prename descclassname"><span class="pre">src.utils.</span></span><span class="sig-name descname"><span class="pre">read_yml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.utils.read_yml" title="Link to this definition"></a></dt>
+<dd><p>Read a YAML file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – The path to the YAML file.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The data from the YAML file.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Emanuel Sommer, Tobias Weber, Lisa Wimmer.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
